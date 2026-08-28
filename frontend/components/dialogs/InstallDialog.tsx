@@ -306,7 +306,6 @@ export function InstallDialog({ open, onOpenChange }: InstallDialogProps) {
               <div className="flex-1">
                 <InstallProgress
                   progress={progressPercent}
-                  isInstalling={hasStarted && !isFinished && !isStopping}
                   className="h-2 bg-muted border border-border/40"
                   fillClassName={
                     isFinished && !hasFailures
@@ -391,7 +390,6 @@ export function InstallDialog({ open, onOpenChange }: InstallDialogProps) {
                               <div className="w-full pt-1">
                                 <InstallProgress
                                   progress={item.status === "success" ? 100 : item.progress}
-                                  isInstalling={item.status === "installing"}
                                   showWave={item.status === "installing"}
                                   className="h-1 bg-muted border border-border/20 mt-2"
                                   fillClassName={
