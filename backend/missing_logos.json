@@ -1,0 +1,386 @@
+[
+  {
+    "name": "PuTTY",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "KeePassXC",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "DB Browser for SQLite",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "OpenVPN Connect",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "TortoiseGit",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "AWS CLI",
+    "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+  },
+  {
+    "name": "kubectl",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "PotPlayer",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Notepad++",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Adobe Acrobat Reader",
+    "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+  },
+  {
+    "name": "Battle.net",
+    "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+  },
+  {
+    "name": "Mullvad VPN",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "SimpleWall",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Google Drive",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Nextcloud Desktop",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Microsoft Office",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "WPS Office",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "SoftMaker FreeOffice",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Foxit PDF Reader",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "HWMonitor",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "GPU-Z",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Autoruns",
+    "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+  },
+  {
+    "name": "TCPView",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "WinDirStat",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "SpaceSniffer",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Files (Preview)",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "FreeCommander XE",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Flameshot",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "LICEcap",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "PureText",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "WindowGrid",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Mozilla Thunderbird",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Mailspring",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Fluent Reader",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "QuiteRSS",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "GitHub Desktop",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Sourcetree",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "JetBrains Toolbox",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "IntelliJ IDEA Community",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "PyCharm Community",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Azure Data Studio",
+    "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+  },
+  {
+    "name": "NVM for Windows",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Oh My Posh",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Starship",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "WinMerge",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Fiddler Classic",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Fiddler Everywhere",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "WinSCP",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "MobaXterm",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Microsoft Remote Desktop",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Moonlight Game Streaming",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "XnView MP",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Paint.NET",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "MusicBee",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Clementine",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Strawberry Music Player",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "MakeMKV",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Avidemux",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "DaVinci Resolve",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Jellyfin Media Player",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Playnite",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "MSI Afterburner",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Joplin",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "GnuCash",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "HomeBank",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "ThisIsWin11",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "ShutUp10++",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Mark Text",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Ghostwriter",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "SpeedCrunch",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Qalculate!",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Flow Launcher",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "draw.io Desktop",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Lucidchart",
+    "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+  },
+  {
+    "name": "Wise Disk Cleaner",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Glary Utilities",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "CutePDF Writer",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Macrium Reflect Free",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Veeam Agent",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Signal",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Oracle VM VirtualBox",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "VMware Workstation Player",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "XAMPP",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Laragon",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "WampServer",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "scrcpy",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Streamlabs Desktop",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "XSplit Broadcaster",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Morgen",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "NexusFont",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "pgAdmin",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "MySQL Workbench",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "WebCatalog",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "Everything Toolbar",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "ModernFlyouts",
+    "error": "HTTP 404"
+  },
+  {
+    "name": "PowerPlanSwitcher",
+    "error": "HTTP 404"
+  }
+]
