@@ -29,7 +29,7 @@ uvicorn app.main:app --reload
 
 ### 2. Windows Companion
 To actually download and install applications on your Windows machine, you must run the local companion application.
-Download the latest `BulkStoreInstallerCompanionSetup.exe` from the [GitHub Releases](../../releases) page and install it.
+Download the latest `BulkStoreInstallerCompanionSetup.exe` from the [GitHub Releases](https://github.com/akilan-27/BulkStoreInstaller/releases/tag/v1.0.0) page and install it.
 
 ## License
 MIT License
