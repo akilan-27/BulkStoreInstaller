@@ -1,0 +1,54 @@
+[
+  {
+    "id": "cat-1",
+    "name": "AI Assistants"
+  },
+  {
+    "id": "cat-2",
+    "name": "Audio & Video"
+  },
+  {
+    "id": "cat-3",
+    "name": "Browsers"
+  },
+  {
+    "id": "cat-4",
+    "name": "Communication"
+  },
+  {
+    "id": "cat-5",
+    "name": "Design"
+  },
+  {
+    "id": "cat-6",
+    "name": "Developer Tools"
+  },
+  {
+    "id": "cat-7",
+    "name": "Downloads"
+  },
+  {
+    "id": "cat-8",
+    "name": "Archives"
+  },
+  {
+    "id": "cat-9",
+    "name": "Gaming"
+  },
+  {
+    "id": "cat-10",
+    "name": "Network"
+  },
+  {
+    "id": "cat-11",
+    "name": "Productivity"
+  },
+  {
+    "id": "cat-12",
+    "name": "Security"
+  },
+  {
+    "id": "cat-13",
+    "name": "System Tools"
+  }
+]
