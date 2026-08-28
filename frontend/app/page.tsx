@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect, useCallback, useRef } from "react";
+import { useState, useMemo, useEffect, useCallback } from "react";
 import { useInstallStatus } from "@/hooks/useInstall";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpDown, ChevronDown } from "lucide-react";
@@ -80,7 +80,6 @@ export default function Home() {
 
   // Progressive rendering state for performance
   const [displayedCount, setDisplayedCount] = useState(100);
-  const loadMoreRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setDisplayedCount(100);
