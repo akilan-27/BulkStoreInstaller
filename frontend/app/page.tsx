@@ -8,7 +8,6 @@ import { Navbar } from "@/components/navigation/Navbar";
 import { Sidebar } from "@/components/navigation/Sidebar";
 import { InstallToast } from "@/components/ui/InstallToast";
 import { ApplicationCard } from "@/components/cards/ApplicationCard";
-import { BundleCard } from "@/components/cards/BundleCard";
 import { CartDrawer } from "@/components/layout/CartDrawer";
 import { InstallDialog } from "@/components/dialogs/InstallDialog";
 import { CompanionDialog } from "@/components/dialogs/CompanionDialog";
@@ -22,10 +21,10 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useApps, useBundles } from "@/hooks/useApps";
+import { useApps } from "@/hooks/useApps";
 import { useInstalledApps, useCompanion } from "@/hooks/useCompanion";
 import { useCart } from "@/contexts/CartContext";
-import { SORT_OPTIONS, type SortOption, type Bundle, type App } from "@/types";
+import { SORT_OPTIONS, type SortOption, type App } from "@/types";
 import { api } from "@/services/api";
 
 export default function Home() {
@@ -59,7 +58,6 @@ export default function Home() {
     category: activeCategory,
     sort: sortOption,
   });
-  const { data: bundles } = useBundles();
   const { data: installedAppIds } = useInstalledApps();
 
   const installedSet = useMemo(
@@ -67,16 +65,7 @@ export default function Home() {
     [installedAppIds]
   );
 
-  // Handle bundle install: add all bundle apps to cart
-  const handleBundleInstall = async (bundle: Bundle) => {
-    try {
-      const bundleApps = await api.getAppsByIds(bundle.apps);
-      bundleApps.forEach((app) => addToCart(app));
-      setCartOpen(true);
-    } catch (err) {
-      console.error("Failed to load bundle apps:", err);
-    }
-  };
+
 
   // Progressive rendering state for performance
   const [displayedCount, setDisplayedCount] = useState(100);
@@ -172,25 +161,6 @@ export default function Home() {
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>
-
-            {/* Featured Bundles — show only on "All" */}
-            {activeCategory === null && bundles && bundles.length > 0 && (
-              <section>
-                <h2 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                  🚀 Quick Start Bundles
-                </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {bundles.map((bundle, index) => (
-                    <BundleCard
-                      key={bundle.id}
-                      bundle={bundle}
-                      index={index}
-                      onInstall={handleBundleInstall}
-                    />
-                  ))}
-                </div>
-              </section>
-            )}
 
             {/* Application Grid */}
             <ErrorBoundary>
@@ -289,7 +259,7 @@ export default function Home() {
         onClose={() => setCartOpen(false)}
         onInstall={handleInstall}
       />
-      <InstallDialog key={installOpen ? "open" : "closed"} open={installOpen} onOpenChange={setInstallOpen} />
+      <InstallDialog open={installOpen} onOpenChange={setInstallOpen} />
       <CompanionDialog
         open={companionDialogOpen}
         onOpenChange={setCompanionDialogOpen}

@@ -110,23 +110,22 @@ export function CartDrawer({ isOpen, onClose, onInstall }: CartDrawerProps) {
                 </motion.div>
               ) : (
                 <div className="space-y-2">
-                  <AnimatePresence initial={false}>
+                  <AnimatePresence initial={false} mode="popLayout">
                     {cart.map((app) => (
                       <motion.div
                         key={app.id}
                         layout
-                        initial={{ opacity: 0, x: 20, height: 0 }}
-                        animate={{ opacity: 1, x: 0, height: "auto" }}
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
                         exit={{
                           opacity: 0,
-                          x: -20,
-                          height: 0,
-                          marginBottom: 0,
+                          scale: 0.95,
+                          transition: { duration: 0.2 }
                         }}
                         transition={{
                           type: "spring",
-                          stiffness: 400,
-                          damping: 35,
+                          stiffness: 500,
+                          damping: 40,
                         }}
                         className="flex items-center gap-3 p-3 rounded-xl bg-card/60 border border-border/30 hover:border-border/60 transition-colors group"
                       >

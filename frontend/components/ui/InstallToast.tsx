@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useInstallStatus } from "@/hooks/useInstall";
 import { X } from "lucide-react";
 
@@ -7,7 +8,16 @@ interface InstallToastProps {
 
 export function InstallToast({ onOpen }: InstallToastProps) {
   const status = useInstallStatus();
-  const isInstalling = status.isInstalling && status.queue.length > 0;
+  const [hidden, setHidden] = useState(false);
+  
+  useEffect(() => {
+    if (status.queue.length === 0) {
+      setHidden(false);
+    }
+  }, [status.queue.length]);
+  
+  // reset hidden if installation starts again or changes?
+  const isInstalling = status.isInstalling && status.queue.length > 0 && !hidden;
 
   const progressPercent = isInstalling
     ? Math.round(
@@ -33,6 +43,7 @@ export function InstallToast({ onOpen }: InstallToastProps) {
         type="button"
         onClick={(e) => {
           e.stopPropagation();
+          setHidden(true);
         }}
         className="text-muted-foreground hover:text-foreground transition-colors"
         aria-label="Close"
