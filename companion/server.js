@@ -10,7 +10,9 @@ const ALLOWED_ORIGINS = [
   'https://bulk-store-installer-5dsselhpg-akilan-27.vercel.app',
   'https://bulk-store-installer.vercel.app',
   'http://localhost:3000',
-  'http://127.0.0.1:3000'
+  'http://127.0.0.1:3000',
+  'http://localhost:3001',
+  'http://127.0.0.1:3001',
 ];
 
 app.use(cors({
