@@ -59,7 +59,7 @@ export function CompanionDialog({ open, onOpenChange }: CompanionDialogProps) {
         <DialogFooter className="flex-col gap-2 sm:flex-col">
           <Button
             className="w-full h-11 text-base"
-            render={<a href="https://github.com/akilan-27/BulkStoreInstaller/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer" />}
+            render={<a href="https://github.com/akilan-27/BulkStoreInstaller/releases/download/v1.0.0/BulkStoreInstallerCompanionSetup.exe" target="_blank" rel="noopener noreferrer" />}
             nativeButton={false}
           >
             <Download className="h-5 w-5 mr-2" />
