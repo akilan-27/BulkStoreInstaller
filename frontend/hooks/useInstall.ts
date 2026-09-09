@@ -13,88 +13,29 @@ const EMPTY_STATUS: InstallStatus = {
 };
 
 
-export function useInstallStatus() {
+export function useInstallStatus(dialogOpen?: boolean) {
   const queryClient = useQueryClient();
 
   const { data } = useQuery({
     queryKey: ["installStatus"],
     queryFn: () => localhost.status(),
-    refetchInterval: (query) =>
-      query.state.data?.isInstalling ? 5000 : false,
+    refetchInterval: (query) => {
+      const isInstalling = query.state.data?.isInstalling;
+      if (isInstalling) return 1000;
+      if (dialogOpen) return 3000;
+      return false;
+    },
   });
 
+  // Invalidate installed apps when a job completes or an item succeeds
   useEffect(() => {
-    if (!data?.isInstalling) return;
-
-    const eventSource = new EventSource(`${config.companionUrl}/events`);
-
-    eventSource.onmessage = (event) => {
-      try {
-        const payload = JSON.parse(event.data);
-        
-        if (payload.type === "progress") {
-          queryClient.setQueryData(["installStatus"], (old: InstallStatus | undefined) => {
-            if (!old) return old;
-            return {
-              ...old,
-              queue: old.queue.map(q => 
-                (q.app.wingetId === payload.appId || q.app.id === payload.appId)
-                  ? { ...q, progress: payload.progress, status: "installing" } 
-                  : q
-              )
-            };
-          });
-        } else if (payload.type === "app_started") {
-          queryClient.setQueryData(["installStatus"], (old: InstallStatus | undefined) => {
-            if (!old) return old;
-            return {
-              ...old,
-              queue: old.queue.map(q => 
-                (q.app.wingetId === payload.appId || q.app.id === payload.appId)
-                  ? { ...q, status: "installing", statusText: "Initializing..." } 
-                  : q
-              )
-            };
-          });
-          queryClient.invalidateQueries({ queryKey: ["installStatus"] });
-        } else if (payload.type === "stdout") {
-          const text = (payload.data || "").toLowerCase();
-          let newText = "";
-          if (text.includes('downloading ')) newText = "Downloading...";
-          else if (text.includes('successfully verified')) newText = "Verifying...";
-          else if (text.includes('starting package install')) newText = "Installing...";
-          
-          if (newText) {
-            queryClient.setQueryData(["installStatus"], (old: InstallStatus | undefined) => {
-              if (!old) return old;
-              return {
-                ...old,
-                queue: old.queue.map(q => 
-                  (q.app.wingetId === payload.appId || q.app.id === payload.appId)
-                    ? { ...q, statusText: newText, status: "installing" } 
-                    : q
-                )
-              };
-            });
-          }
-        } else if (
-          payload.type === "app_completed" || 
-          payload.type === "app_failed" || 
-          payload.type === "job_completed" || 
-          payload.type === "job_cancelled"
-        ) {
-          queryClient.invalidateQueries({ queryKey: ["installStatus"] });
-          if (payload.type === "app_completed" || payload.type === "job_completed") {
-            queryClient.invalidateQueries({ queryKey: ["installedApps"] });
-          }
-        }
-      } catch {}
-    };
-
-    return () => {
-      eventSource.close();
-    };
-  }, [data?.isInstalling, queryClient]);
+    if (data?.successCount && data.successCount > 0) {
+      queryClient.invalidateQueries({ queryKey: ["installedApps"] });
+    }
+    if (!data?.isInstalling && data?.queue && data.queue.length > 0) {
+      queryClient.invalidateQueries({ queryKey: ["installedApps"] });
+    }
+  }, [data?.isInstalling, data?.successCount, data?.queue?.length, queryClient]);
 
   return data || EMPTY_STATUS;
 }

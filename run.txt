@@ -1,0 +1,6 @@
+cd "D:\web project\multi app downloader"
+git status
+git add .
+git commit -m "Update project files"
+git pull --rebase origin main
+git push origin main

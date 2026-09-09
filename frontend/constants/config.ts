@@ -1,7 +1,7 @@
 // Environment-based configuration
 export const config = {
   apiUrl: process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000",
-  companionUrl: process.env.NEXT_PUBLIC_COMPANION_URL || "/api/companion",
+  companionUrl: process.env.NEXT_PUBLIC_COMPANION_URL || "http://127.0.0.1:4545",
   useMock: process.env.NEXT_PUBLIC_USE_MOCK === "true",
 } as const;
 

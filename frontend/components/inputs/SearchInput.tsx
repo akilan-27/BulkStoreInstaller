@@ -15,7 +15,9 @@ export const SearchInput = forwardRef<HTMLInputElement>(function SearchInput(_, 
   const { searchQuery, setSearchQuery, clearSearch, searchResults, isSearching, hasQuery } =
     useSearch();
   const { addToCart, isInCart } = useCart();
-  const { data: installedAppIds } = useInstalledApps();
+  
+  const searchAppIds = searchResults ? searchResults.map(a => a.wingetId || a.id) : [];
+  const { data: installedAppIds } = useInstalledApps(searchAppIds);
   const [isFocused, setIsFocused] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [showAll, setShowAll] = useState(false);

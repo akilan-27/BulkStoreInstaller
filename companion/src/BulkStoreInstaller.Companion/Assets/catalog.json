@@ -1,0 +1,1017 @@
+[
+  {
+    "id": "app-1",
+    "name": "Visual Studio Code",
+    "wingetId": "Microsoft.VisualStudioCode"
+  },
+  {
+    "id": "app-2",
+    "name": "Git",
+    "wingetId": "Git.Git"
+  },
+  {
+    "id": "app-4",
+    "name": "Node.js",
+    "wingetId": "OpenJS.NodeJS"
+  },
+  {
+    "id": "app-5",
+    "name": "Python",
+    "wingetId": "Python.Python.3.12"
+  },
+  {
+    "id": "app-6",
+    "name": "KeePassXC",
+    "wingetId": "KeePassXCTeam.KeePassXC"
+  },
+  {
+    "id": "app-7",
+    "name": "Android Studio",
+    "wingetId": "Google.AndroidStudio"
+  },
+  {
+    "id": "app-8",
+    "name": "Windows Terminal",
+    "wingetId": "Microsoft.WindowsTerminal"
+  },
+  {
+    "id": "app-10",
+    "name": "Notion",
+    "wingetId": "Notion.Notion"
+  },
+  {
+    "id": "app-11",
+    "name": "Obsidian",
+    "wingetId": "Obsidian.Obsidian"
+  },
+  {
+    "id": "app-12",
+    "name": "Microsoft PowerToys",
+    "wingetId": "Microsoft.PowerToys"
+  },
+  {
+    "id": "app-13",
+    "name": "Evernote",
+    "wingetId": "Evernote.Evernote"
+  },
+  {
+    "id": "app-15",
+    "name": "LibreOffice",
+    "wingetId": "TheDocumentFoundation.LibreOffice"
+  },
+  {
+    "id": "app-17",
+    "name": "Google Chrome",
+    "wingetId": "Google.Chrome"
+  },
+  {
+    "id": "app-18",
+    "name": "Mozilla Firefox",
+    "wingetId": "Mozilla.Firefox"
+  },
+  {
+    "id": "app-19",
+    "name": "OpenVPN Connect",
+    "wingetId": "OpenVPNTechnologies.OpenVPNConnect"
+  },
+  {
+    "id": "app-20",
+    "name": "TortoiseGit",
+    "wingetId": "TortoiseGit.TortoiseGit"
+  },
+  {
+    "id": "app-21",
+    "name": "Microsoft Edge",
+    "wingetId": "Microsoft.Edge"
+  },
+  {
+    "id": "app-23",
+    "name": "EarTrumpet",
+    "wingetId": "File-New-Project.EarTrumpet"
+  },
+  {
+    "id": "app-25",
+    "name": "Zoom",
+    "wingetId": "Zoom.Zoom"
+  },
+  {
+    "id": "app-26",
+    "name": "Microsoft Teams",
+    "wingetId": "Microsoft.Teams"
+  },
+  {
+    "id": "app-27",
+    "name": "Telegram",
+    "wingetId": "Telegram.TelegramDesktop"
+  },
+  {
+    "id": "app-30",
+    "name": "VLC Media Player",
+    "wingetId": "VideoLAN.VLC"
+  },
+  {
+    "id": "app-31",
+    "name": "AWS CLI",
+    "wingetId": "Amazon.AWSCLI"
+  },
+  {
+    "id": "app-32",
+    "name": "OBS Studio",
+    "wingetId": "OBSProject.OBSStudio"
+  },
+  {
+    "id": "app-33",
+    "name": "Audacity",
+    "wingetId": "Audacity.Audacity"
+  },
+  {
+    "id": "app-34",
+    "name": "HandBrake",
+    "wingetId": "HandBrake.HandBrake"
+  },
+  {
+    "id": "app-35",
+    "name": "kubectl",
+    "wingetId": "Kubernetes.kubectl"
+  },
+  {
+    "id": "app-36",
+    "name": "Steam",
+    "wingetId": "Valve.Steam"
+  },
+  {
+    "id": "app-37",
+    "name": "Epic Games Launcher",
+    "wingetId": "EpicGames.EpicGamesLauncher"
+  },
+  {
+    "id": "app-38",
+    "name": "GOG Galaxy",
+    "wingetId": "GOG.Galaxy"
+  },
+  {
+    "id": "app-39",
+    "name": "Ubisoft Connect",
+    "wingetId": "Ubisoft.Connect"
+  },
+  {
+    "id": "app-40",
+    "name": "Terraform",
+    "wingetId": "Hashicorp.Terraform"
+  },
+  {
+    "id": "app-41",
+    "name": "7-Zip",
+    "wingetId": "7zip.7zip"
+  },
+  {
+    "id": "app-43",
+    "name": "Rufus",
+    "wingetId": "Rufus.Rufus"
+  },
+  {
+    "id": "app-44",
+    "name": "Everything",
+    "wingetId": "voidtools.Everything"
+  },
+  {
+    "id": "app-45",
+    "name": "GitHub CLI",
+    "wingetId": "GitHub.cli"
+  },
+  {
+    "id": "app-46",
+    "name": "WireGuard",
+    "wingetId": "WireGuard.WireGuard"
+  },
+  {
+    "id": "app-48",
+    "name": "Neovim",
+    "wingetId": "Neovim.Neovim"
+  },
+  {
+    "id": "app-49",
+    "name": "Blender",
+    "wingetId": "BlenderFoundation.Blender"
+  },
+  {
+    "id": "app-50",
+    "name": "GIMP",
+    "wingetId": "GIMP.GIMP"
+  },
+  {
+    "id": "app-51",
+    "name": "Inkscape",
+    "wingetId": "Inkscape.Inkscape"
+  },
+  {
+    "id": "app-52",
+    "name": "Krita",
+    "wingetId": "KDE.Krita"
+  },
+  {
+    "id": "app-53",
+    "name": "Canva",
+    "wingetId": "Canva.Canva"
+  },
+  {
+    "id": "app-54",
+    "name": "PotPlayer",
+    "wingetId": "Daum.PotPlayer"
+  },
+  {
+    "id": "app-55",
+    "name": "Neat Download Manager",
+    "wingetId": "JavadMotallebi.NeatDownloadManager"
+  },
+  {
+    "id": "app-56",
+    "name": "Notepad++",
+    "wingetId": "Notepad++.Notepad++"
+  },
+  {
+    "id": "app-57",
+    "name": "Process Explorer",
+    "wingetId": "Microsoft.Sysinternals.ProcessExplorer"
+  },
+  {
+    "id": "app-58",
+    "name": "TeamViewer",
+    "wingetId": "TeamViewer.TeamViewer"
+  },
+  {
+    "id": "app-59",
+    "name": "qBittorrent",
+    "wingetId": "qBittorrent.qBittorrent"
+  },
+  {
+    "id": "app-60",
+    "name": "Docker Desktop",
+    "wingetId": "Docker.DockerDesktop"
+  },
+  {
+    "id": "app-61",
+    "name": "Postman",
+    "wingetId": "Postman.Postman"
+  },
+  {
+    "id": "app-62",
+    "name": "Adobe Acrobat Reader",
+    "wingetId": "Adobe.Acrobat.Reader.64-bit"
+  },
+  {
+    "id": "app-63",
+    "name": "Brave Browser",
+    "wingetId": "Brave.Brave"
+  },
+  {
+    "id": "app-64",
+    "name": "Opera",
+    "wingetId": "Opera.Opera"
+  },
+  {
+    "id": "app-65",
+    "name": "Slack",
+    "wingetId": "SlackTechnologies.Slack"
+  },
+  {
+    "id": "app-66",
+    "name": "Discord",
+    "wingetId": "Discord.Discord"
+  },
+  {
+    "id": "app-67",
+    "name": "Spotify",
+    "wingetId": "Spotify.Spotify"
+  },
+  {
+    "id": "app-68",
+    "name": "iTunes",
+    "wingetId": "Apple.iTunes"
+  },
+  {
+    "id": "app-69",
+    "name": "Battle.net",
+    "wingetId": "Blizzard.BattleNet"
+  },
+  {
+    "id": "app-70",
+    "name": "WinRAR",
+    "wingetId": "RARLab.WinRAR"
+  },
+  {
+    "id": "app-72",
+    "name": "CCleaner",
+    "wingetId": "Piriform.CCleaner"
+  },
+  {
+    "id": "app-73",
+    "name": "Figma",
+    "wingetId": "Figma.Figma"
+  },
+  {
+    "id": "app-74",
+    "name": "Bitdefender",
+    "wingetId": "Bitdefender.Bitdefender"
+  },
+  {
+    "id": "app-75",
+    "name": "Malwarebytes",
+    "wingetId": "Malwarebytes.Malwarebytes"
+  },
+  {
+    "id": "app-76",
+    "name": "AdGuard",
+    "wingetId": "AdGuard.AdGuard"
+  },
+  {
+    "id": "app-78",
+    "name": "Mullvad VPN",
+    "wingetId": "MullvadVPN.MullvadVPN"
+  },
+  {
+    "id": "app-80",
+    "name": "Dropbox",
+    "wingetId": "Dropbox.Dropbox"
+  },
+  {
+    "id": "app-81",
+    "name": "Google Drive",
+    "wingetId": "Google.GoogleDrive"
+  },
+  {
+    "id": "app-82",
+    "name": "MEGAsync",
+    "wingetId": "Mega.MEGASync"
+  },
+  {
+    "id": "app-84",
+    "name": "Nextcloud Desktop",
+    "wingetId": "Nextcloud.NextcloudDesktop"
+  },
+  {
+    "id": "app-85",
+    "name": "Microsoft Office",
+    "wingetId": "Microsoft.Office"
+  },
+  {
+    "id": "app-86",
+    "name": "ONLYOFFICE",
+    "wingetId": "ONLYOFFICE.DesktopEditors"
+  },
+  {
+    "id": "app-88",
+    "name": "Apache OpenOffice",
+    "wingetId": "Apache.OpenOffice"
+  },
+  {
+    "id": "app-89",
+    "name": "SoftMaker FreeOffice",
+    "wingetId": "SoftMaker.FreeOffice.2024"
+  },
+  {
+    "id": "app-90",
+    "name": "SumatraPDF",
+    "wingetId": "SumatraPDF.SumatraPDF"
+  },
+  {
+    "id": "app-91",
+    "name": "Foxit PDF Reader",
+    "wingetId": "Foxit.FoxitReader"
+  },
+  {
+    "id": "app-92",
+    "name": "PDF24 Creator",
+    "wingetId": "geeksoftwareGmbH.PDF24Creator"
+  },
+  {
+    "id": "app-93",
+    "name": "Bitwarden",
+    "wingetId": "Bitwarden.Bitwarden"
+  },
+  {
+    "id": "app-94",
+    "name": "1Password",
+    "wingetId": "AgileBits.1Password"
+  },
+  {
+    "id": "app-95",
+    "name": "NordPass",
+    "wingetId": "NordSecurity.NordPass"
+  },
+  {
+    "id": "app-96",
+    "name": "HWiNFO",
+    "wingetId": "REALiX.HWiNFO"
+  },
+  {
+    "id": "app-97",
+    "name": "HWMonitor",
+    "wingetId": "CPUID.HWMonitor"
+  },
+  {
+    "id": "app-98",
+    "name": "CrystalDiskInfo",
+    "wingetId": "CrystalDewWorld.CrystalDiskInfo"
+  },
+  {
+    "id": "app-99",
+    "name": "CrystalDiskMark",
+    "wingetId": "CrystalDewWorld.CrystalDiskMark"
+  },
+  {
+    "id": "app-100",
+    "name": "GPU-Z",
+    "wingetId": "TechPowerUp.GPU-Z"
+  },
+  {
+    "id": "app-101",
+    "name": "Process Monitor",
+    "wingetId": "Microsoft.Sysinternals.ProcessMonitor"
+  },
+  {
+    "id": "app-102",
+    "name": "Autoruns",
+    "wingetId": "Microsoft.Sysinternals.Autoruns"
+  },
+  {
+    "id": "app-103",
+    "name": "TCPView",
+    "wingetId": "Microsoft.Sysinternals.TCPView"
+  },
+  {
+    "id": "app-104",
+    "name": "Display Driver Uninstaller",
+    "wingetId": "Wagnardsoft.DisplayDriverUninstaller"
+  },
+  {
+    "id": "app-105",
+    "name": "Ookla Speedtest",
+    "wingetId": "Ookla.Speedtest.Desktop"
+  },
+  {
+    "id": "app-106",
+    "name": "WinDirStat",
+    "wingetId": "WinDirStat.WinDirStat"
+  },
+  {
+    "id": "app-107",
+    "name": "WizTree",
+    "wingetId": "AntibodySoftware.WizTree"
+  },
+  {
+    "id": "app-108",
+    "name": "SpaceSniffer",
+    "wingetId": "UderzoSoftware.SpaceSniffer"
+  },
+  {
+    "id": "app-109",
+    "name": "QuickLook",
+    "wingetId": "QL-Win.QuickLook"
+  },
+  {
+    "id": "app-110",
+    "name": "Files (Preview)",
+    "wingetId": "FilesCommunity.Files"
+  },
+  {
+    "id": "app-111",
+    "name": "Double Commander",
+    "wingetId": "alexx2000.DoubleCommander"
+  },
+  {
+    "id": "app-113",
+    "name": "TeraCopy",
+    "wingetId": "CodeSector.TeraCopy"
+  },
+  {
+    "id": "app-114",
+    "name": "ShareX",
+    "wingetId": "ShareX.ShareX"
+  },
+  {
+    "id": "app-115",
+    "name": "Greenshot",
+    "wingetId": "Greenshot.Greenshot"
+  },
+  {
+    "id": "app-116",
+    "name": "Flameshot",
+    "wingetId": "Flameshot.Flameshot"
+  },
+  {
+    "id": "app-117",
+    "name": "LICEcap",
+    "wingetId": "Cockos.LICEcap"
+  },
+  {
+    "id": "app-118",
+    "name": "Lightshot",
+    "wingetId": "Skillbrains.Lightshot"
+  },
+  {
+    "id": "app-119",
+    "name": "Ditto",
+    "wingetId": "Ditto.Ditto"
+  },
+  {
+    "id": "app-121",
+    "name": "AltSnap",
+    "wingetId": "AltSnap.AltSnap"
+  },
+  {
+    "id": "app-123",
+    "name": "Mozilla Thunderbird",
+    "wingetId": "Mozilla.Thunderbird"
+  },
+  {
+    "id": "app-124",
+    "name": "Mailbird",
+    "wingetId": "Mailbird.Mailbird"
+  },
+  {
+    "id": "app-125",
+    "name": "eM Client",
+    "wingetId": "eMClient.eMClient"
+  },
+  {
+    "id": "app-126",
+    "name": "Mailspring",
+    "wingetId": "Foundry376.Mailspring"
+  },
+  {
+    "id": "app-127",
+    "name": "Fluent Reader",
+    "wingetId": "yang991178.fluent-reader"
+  },
+  {
+    "id": "app-128",
+    "name": "RSS Guard",
+    "wingetId": "martinrotter.RSSGuard"
+  },
+  {
+    "id": "app-130",
+    "name": "GitHub Desktop",
+    "wingetId": "GitHub.GitHubDesktop"
+  },
+  {
+    "id": "app-131",
+    "name": "Fork",
+    "wingetId": "Fork.Fork"
+  },
+  {
+    "id": "app-132",
+    "name": "Sourcetree",
+    "wingetId": "Atlassian.Sourcetree"
+  },
+  {
+    "id": "app-133",
+    "name": "Sublime Text",
+    "wingetId": "SublimeHQ.SublimeText.4"
+  },
+  {
+    "id": "app-134",
+    "name": "JetBrains Toolbox",
+    "wingetId": "JetBrains.Toolbox"
+  },
+  {
+    "id": "app-135",
+    "name": "IntelliJ IDEA Community",
+    "wingetId": "JetBrains.IntelliJIDEA.Community"
+  },
+  {
+    "id": "app-136",
+    "name": "PyCharm Community",
+    "wingetId": "JetBrains.PyCharm.Community"
+  },
+  {
+    "id": "app-138",
+    "name": "Apache NetBeans",
+    "wingetId": "Apache.NetBeans"
+  },
+  {
+    "id": "app-139",
+    "name": "Insomnia",
+    "wingetId": "Insomnia.Insomnia"
+  },
+  {
+    "id": "app-140",
+    "name": "TablePlus",
+    "wingetId": "TablePlus.TablePlus"
+  },
+  {
+    "id": "app-142",
+    "name": "SQL Server Management Studio",
+    "wingetId": "Microsoft.SQLServerManagementStudio"
+  },
+  {
+    "id": "app-144",
+    "name": "MongoDB Compass",
+    "wingetId": "MongoDB.Compass.Community"
+  },
+  {
+    "id": "app-145",
+    "name": "NVM for Windows",
+    "wingetId": "CoreyButler.NVMforWindows"
+  },
+  {
+    "id": "app-146",
+    "name": "Oh My Posh",
+    "wingetId": "JanDeDobbeleer.OhMyPosh"
+  },
+  {
+    "id": "app-147",
+    "name": "Starship",
+    "wingetId": "Starship.Starship"
+  },
+  {
+    "id": "app-148",
+    "name": "Alacritty",
+    "wingetId": "Alacritty.Alacritty"
+  },
+  {
+    "id": "app-150",
+    "name": "WinMerge",
+    "wingetId": "WinMerge.WinMerge"
+  },
+  {
+    "id": "app-154",
+    "name": "LINQPad",
+    "wingetId": "LINQPad.LINQPad.8"
+  },
+  {
+    "id": "app-156",
+    "name": "Wireshark",
+    "wingetId": "WiresharkFoundation.Wireshark"
+  },
+  {
+    "id": "app-157",
+    "name": "Nmap",
+    "wingetId": "Insecure.Nmap"
+  },
+  {
+    "id": "app-158",
+    "name": "WinSCP",
+    "wingetId": "WinSCP.WinSCP"
+  },
+  {
+    "id": "app-159",
+    "name": "Termius",
+    "wingetId": "Termius.Termius"
+  },
+  {
+    "id": "app-160",
+    "name": "MobaXterm",
+    "wingetId": "Mobatek.MobaXterm"
+  },
+  {
+    "id": "app-161",
+    "name": "Microsoft Remote Desktop",
+    "wingetId": "Microsoft.RemoteDesktopClient"
+  },
+  {
+    "id": "app-163",
+    "name": "Parsec",
+    "wingetId": "Parsec.Parsec"
+  },
+  {
+    "id": "app-164",
+    "name": "Moonlight Game Streaming",
+    "wingetId": "MoonlightGameStreamingProject.Moonlight"
+  },
+  {
+    "id": "app-166",
+    "name": "IrfanView",
+    "wingetId": "IrfanSkiljan.IrfanView"
+  },
+  {
+    "id": "app-167",
+    "name": "XnView MP",
+    "wingetId": "XnSoft.XnViewMP"
+  },
+  {
+    "id": "app-168",
+    "name": "FastStone Image Viewer",
+    "wingetId": "FastStone.Viewer"
+  },
+  {
+    "id": "app-169",
+    "name": "Paint.NET",
+    "wingetId": "dotPDN.PaintDotNet"
+  },
+  {
+    "id": "app-170",
+    "name": "RawTherapee",
+    "wingetId": "RawTherapee.RawTherapee"
+  },
+  {
+    "id": "app-171",
+    "name": "darktable",
+    "wingetId": "darktable.darktable"
+  },
+  {
+    "id": "app-175",
+    "name": "Audacious",
+    "wingetId": "Audacious.MediaPlayer"
+  },
+  {
+    "id": "app-176",
+    "name": "Clementine",
+    "wingetId": "Clementine.Clementine"
+  },
+  {
+    "id": "app-180",
+    "name": "Avidemux",
+    "wingetId": "Avidemux.Avidemux"
+  },
+  {
+    "id": "app-181",
+    "name": "Shotcut",
+    "wingetId": "Meltytech.Shotcut"
+  },
+  {
+    "id": "app-183",
+    "name": "Plex",
+    "wingetId": "Plex.Plex"
+  },
+  {
+    "id": "app-184",
+    "name": "Jellyfin Media Player",
+    "wingetId": "Jellyfin.JellyfinMediaPlayer"
+  },
+  {
+    "id": "app-185",
+    "name": "Playnite",
+    "wingetId": "Playnite.Playnite"
+  },
+  {
+    "id": "app-186",
+    "name": "Heroic Games Launcher",
+    "wingetId": "HeroicGamesLauncher.HeroicGamesLauncher"
+  },
+  {
+    "id": "app-188",
+    "name": "MSI Afterburner",
+    "wingetId": "Guru3D.Afterburner"
+  },
+  {
+    "id": "app-190",
+    "name": "Anki",
+    "wingetId": "Anki.Anki"
+  },
+  {
+    "id": "app-192",
+    "name": "Calibre",
+    "wingetId": "calibre.calibre"
+  },
+  {
+    "id": "app-193",
+    "name": "Joplin",
+    "wingetId": "Joplin.Joplin"
+  },
+  {
+    "id": "app-194",
+    "name": "Standard Notes",
+    "wingetId": "StandardNotes.StandardNotes"
+  },
+  {
+    "id": "app-195",
+    "name": "GnuCash",
+    "wingetId": "GnuCash.GnuCash"
+  },
+  {
+    "id": "app-197",
+    "name": "StartAllBack",
+    "wingetId": "StartIsBack.StartAllBack"
+  },
+  {
+    "id": "app-198",
+    "name": "ExplorerPatcher",
+    "wingetId": "valinet.ExplorerPatcher"
+  },
+  {
+    "id": "app-203",
+    "name": "Mark Text",
+    "wingetId": "MarkText.MarkText"
+  },
+  {
+    "id": "app-204",
+    "name": "Zettlr",
+    "wingetId": "Zettlr.Zettlr"
+  },
+  {
+    "id": "app-206",
+    "name": "SpeedCrunch",
+    "wingetId": "SpeedCrunch.SpeedCrunch"
+  },
+  {
+    "id": "app-207",
+    "name": "Qalculate!",
+    "wingetId": "Qalculate.Qalculate"
+  },
+  {
+    "id": "app-209",
+    "name": "PicPick",
+    "wingetId": "NGWIN.PicPick"
+  },
+  {
+    "id": "app-210",
+    "name": "PeaZip",
+    "wingetId": "Giorgiotani.Peazip"
+  },
+  {
+    "id": "app-211",
+    "name": "Bandizip",
+    "wingetId": "Bandisoft.Bandizip"
+  },
+  {
+    "id": "app-212",
+    "name": "NanaZip",
+    "wingetId": "M2Team.NanaZip"
+  },
+  {
+    "id": "app-213",
+    "name": "Flow Launcher",
+    "wingetId": "Flow-Launcher.Flow-Launcher"
+  },
+  {
+    "id": "app-215",
+    "name": "Listary",
+    "wingetId": "Bopsoft.Listary"
+  },
+  {
+    "id": "app-216",
+    "name": "draw.io Desktop",
+    "wingetId": "JGraph.Draw"
+  },
+  {
+    "id": "app-219",
+    "name": "BleachBit",
+    "wingetId": "BleachBit.BleachBit"
+  },
+  {
+    "id": "app-220",
+    "name": "Wise Disk Cleaner",
+    "wingetId": "WiseCleaner.WiseDiskCleaner"
+  },
+  {
+    "id": "app-221",
+    "name": "Glary Utilities",
+    "wingetId": "Glarysoft.GlaryUtilities"
+  },
+  {
+    "id": "app-223",
+    "name": "CutePDF Writer",
+    "wingetId": "AcroSoftware.CutePDFWriter"
+  },
+  {
+    "id": "app-224",
+    "name": "Bullzip PDF Printer",
+    "wingetId": "Bullzip.PDFPrinter"
+  },
+  {
+    "id": "app-226",
+    "name": "Veeam Agent",
+    "wingetId": "Veeam.VeeamAgent"
+  },
+  {
+    "id": "app-227",
+    "name": "SyncBackFree",
+    "wingetId": "2BrightSparks.SyncBackFree"
+  },
+  {
+    "id": "app-229",
+    "name": "Signal",
+    "wingetId": "OpenWhisperSystems.Signal"
+  },
+  {
+    "id": "app-230",
+    "name": "Element",
+    "wingetId": "Element.Element"
+  },
+  {
+    "id": "app-231",
+    "name": "Oracle VM VirtualBox",
+    "wingetId": "Oracle.VirtualBox"
+  },
+  {
+    "id": "app-233",
+    "name": "Multipass",
+    "wingetId": "Canonical.Multipass"
+  },
+  {
+    "id": "app-234",
+    "name": "Rancher Desktop",
+    "wingetId": "SUSE.RancherDesktop"
+  },
+  {
+    "id": "app-236",
+    "name": "Laragon",
+    "wingetId": "LeNgocKhoa.Laragon"
+  },
+  {
+    "id": "app-238",
+    "name": "scrcpy",
+    "wingetId": "Genymobile.scrcpy"
+  },
+  {
+    "id": "app-240",
+    "name": "iMazing",
+    "wingetId": "DigiDNA.iMazing"
+  },
+  {
+    "id": "app-241",
+    "name": "Voicemeeter",
+    "wingetId": "VB-Audio.Voicemeeter"
+  },
+  {
+    "id": "app-244",
+    "name": "Streamlabs Desktop",
+    "wingetId": "Streamlabs.Streamlabs"
+  },
+  {
+    "id": "app-246",
+    "name": "Morgen",
+    "wingetId": "Morgen.Morgen"
+  },
+  {
+    "id": "app-251",
+    "name": "Maxima",
+    "wingetId": "MaximaTeam.Maxima"
+  },
+  {
+    "id": "app-252",
+    "name": "FreeCAD",
+    "wingetId": "FreeCAD.FreeCAD"
+  },
+  {
+    "id": "app-253",
+    "name": "LibreCAD",
+    "wingetId": "LibreCAD.LibreCAD"
+  },
+  {
+    "id": "app-254",
+    "name": "KiCad",
+    "wingetId": "KiCad.KiCad"
+  },
+  {
+    "id": "app-255",
+    "name": "HeidiSQL",
+    "wingetId": "HeidiSQL.HeidiSQL"
+  },
+  {
+    "id": "app-256",
+    "name": "pgAdmin",
+    "wingetId": "PostgreSQL.pgAdmin"
+  },
+  {
+    "id": "app-257",
+    "name": "MySQL Workbench",
+    "wingetId": "Oracle.MySQLWorkbench"
+  },
+  {
+    "id": "app-258",
+    "name": "SQLiteStudio",
+    "wingetId": "PawelSalawa.SQLiteStudio"
+  },
+  {
+    "id": "app-263",
+    "name": "ModernFlyouts",
+    "wingetId": "ModernFlyouts.ModernFlyouts"
+  },
+  {
+    "id": "app-265",
+    "name": "ChatGPT",
+    "wingetId": "9PLM9XGG6VKS"
+  },
+  {
+    "id": "app-266",
+    "name": "Claude",
+    "wingetId": "Anthropic.Claude"
+  },
+  {
+    "id": "app-269",
+    "name": "Perplexity",
+    "wingetId": "Perplexity.Perplexity"
+  },
+  {
+    "id": "app-271",
+    "name": "Ollama",
+    "wingetId": "Ollama.Ollama"
+  },
+  {
+    "id": "app-273",
+    "name": "Cursor",
+    "wingetId": "Anysphere.Cursor"
+  },
+  {
+    "id": "app-274",
+    "name": "Windsurf",
+    "wingetId": "Codeium.Windsurf"
+  },
+  {
+    "id": "app-275",
+    "name": "Internet Download Manager",
+    "wingetId": "Tonec.InternetDownloadManager"
+  }
+]

@@ -27,11 +27,14 @@ export function useCompanion(): CompanionStatus {
 /**
  * Fetch list of already-installed app IDs from the Companion.
  */
-export function useInstalledApps() {
+export function useInstalledApps(appIds: string[]) {
+  const companion = useCompanion();
+
   return useQuery<string[]>({
-    queryKey: ["installedApps"],
-    queryFn: () => localhost.getInstalledApps(),
+    queryKey: ["installedApps", appIds],
+    queryFn: () => localhost.getInstalledApps(appIds),
     staleTime: 60 * 1000, // 1 minute
     retry: 1,
+    enabled: companion.isConnected && appIds.length > 0,
   });
 }

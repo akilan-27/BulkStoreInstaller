@@ -35,7 +35,7 @@ export default function Home() {
   const [companionDialogOpen, setCompanionDialogOpen] = useState(false);
 
   // Track install status to reopen dialog on refresh if needed
-  const installStatus = useInstallStatus();
+  const installStatus = useInstallStatus(installOpen);
   useEffect(() => {
     if (installStatus.isInstalling && !installOpen) {
       setInstallOpen(true);
@@ -58,7 +58,13 @@ export default function Home() {
     category: activeCategory,
     sort: sortOption,
   });
-  const { data: installedAppIds } = useInstalledApps();
+  
+  const appIdsForVerification = useMemo(() => {
+    if (!apps) return [];
+    return apps.map(a => a.wingetId || a.id);
+  }, [apps]);
+
+  const { data: installedAppIds } = useInstalledApps(appIdsForVerification);
 
   const installedSet = useMemo(
     () => new Set(installedAppIds || []),

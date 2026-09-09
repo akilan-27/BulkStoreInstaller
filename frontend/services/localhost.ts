@@ -6,14 +6,14 @@ const currentApps: Map<string, App> = new Map();
 
 export const localhost = {
   health: async (): Promise<boolean> => {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 3000);
     try {
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 10000);
       console.log("Fetching health from:", companionEndpoints.health);
       const res = await fetch(companionEndpoints.health, {
         signal: controller.signal,
+        headers: { "x-bulkstoreinstaller-client": "web-v1" }
       });
-      clearTimeout(timeout);
       if (!res.ok) {
         console.error("Health fetch failed with status:", res.status);
         return false;
@@ -24,6 +24,8 @@ export const localhost = {
     } catch (error) {
       console.error("Health fetch error:", error);
       return false;
+    } finally {
+      clearTimeout(timeout);
     }
   },
 
@@ -31,7 +33,7 @@ export const localhost = {
     apps.forEach(a => currentApps.set(a.wingetId || a.id, a));
     const res = await fetch(companionEndpoints.install, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", "x-bulkstoreinstaller-client": "web-v1" },
       body: JSON.stringify({
         appIds: apps.map((a) => a.wingetId || a.id),
       }),
@@ -89,7 +91,7 @@ export const localhost = {
   },
 
   cancel: async (): Promise<void> => {
-    const res = await fetch(companionEndpoints.cancel, { method: "POST" });
+    const res = await fetch(companionEndpoints.cancel, { method: "POST", headers: { "x-bulkstoreinstaller-client": "web-v1" } });
     if (!res.ok) throw new Error("Failed to cancel installation");
   },
 
@@ -101,7 +103,7 @@ export const localhost = {
     if (failedIds.length > 0) {
       const res2 = await fetch(companionEndpoints.install, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", "x-bulkstoreinstaller-client": "web-v1" },
         body: JSON.stringify({ appIds: failedIds }),
       });
       if (!res2.ok) throw new Error("Failed to retry");
@@ -112,7 +114,7 @@ export const localhost = {
     try {
       const res = await fetch(companionEndpoints.installed, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", "x-bulkstoreinstaller-client": "web-v1" },
         body: JSON.stringify({ appIds: appIds || [] }),
       });
       if (!res.ok) return [];

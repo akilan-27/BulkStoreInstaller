@@ -1,0 +1,7 @@
+D:\web project\multi app downloader\companion\tests\BulkStoreInstaller.Companion.Tests\bin\Debug\net10.0-windows\CoverletSourceRootsMapping_BulkStoreInstaller.Companion.Tests
+D:\web project\multi app downloader\companion\tests\BulkStoreInstaller.Companion.Tests\obj\Debug\net10.0-windows\BulkStoreInstaller.Companion.Tests.csproj.AssemblyReference.cache
+D:\web project\multi app downloader\companion\tests\BulkStoreInstaller.Companion.Tests\obj\Debug\net10.0-windows\BulkStoreInstaller.Companion.Tests.GeneratedMSBuildEditorConfig.editorconfig
+D:\web project\multi app downloader\companion\tests\BulkStoreInstaller.Companion.Tests\obj\Debug\net10.0-windows\BulkStoreInstaller.Companion.Tests.AssemblyInfoInputs.cache
+D:\web project\multi app downloader\companion\tests\BulkStoreInstaller.Companion.Tests\obj\Debug\net10.0-windows\BulkStoreInstaller.Companion.Tests.AssemblyInfo.cs
+D:\web project\multi app downloader\companion\tests\BulkStoreInstaller.Companion.Tests\obj\Debug\net10.0-windows\BulkStoreInstaller.Companion.Tests.csproj.CoreCompileInputs.cache
+D:\web project\multi app downloader\companion\tests\BulkStoreInstaller.Companion.Tests\obj\Debug\net10.0-windows\BulkStoreInstaller.Companion.Tests.sourcelink.json
