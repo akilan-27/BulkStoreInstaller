@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { useSearch } from "@/hooks/useSearch";
 import { useCart } from "@/contexts/CartContext";
-import { useInstalledApps } from "@/hooks/useCompanion";
+import { useInstalledApps, useBridgeState } from "@/hooks/useCompanion";
 import { App } from "@/types";
 import { AppIcon } from "@/components/ui/app-icon";
 
@@ -16,8 +16,8 @@ export const SearchInput = forwardRef<HTMLInputElement>(function SearchInput(_, 
     useSearch();
   const { addToCart, isInCart } = useCart();
   
-  const searchAppIds = searchResults ? searchResults.map(a => a.wingetId || a.id) : [];
-  const { data: installedAppIds } = useInstalledApps(searchAppIds);
+  const bridgeState = useBridgeState(false, false);
+  const { data: installedAppIds } = useInstalledApps(searchResults || [], bridgeState);
   const [isFocused, setIsFocused] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [showAll, setShowAll] = useState(false);

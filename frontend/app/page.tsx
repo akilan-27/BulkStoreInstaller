@@ -22,10 +22,10 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useApps } from "@/hooks/useApps";
-import { useInstalledApps, useCompanion } from "@/hooks/useCompanion";
+import { useInstalledApps, useBridgeState } from "@/hooks/useCompanion";
 import { useCart } from "@/contexts/CartContext";
 import { SORT_OPTIONS, type SortOption, type App } from "@/types";
-import { api } from "@/services/api";
+
 
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -42,7 +42,7 @@ export default function Home() {
     }
   }, [installStatus.isInstalling, installOpen]);
 
-  const companion = useCompanion();
+  const bridgeState = useBridgeState(companionDialogOpen, installStatus.isInstalling);
   const { addToCart, removeFromCart, cartIds } = useCart();
 
   const handleToggleCart = useCallback((app: App, isSelected: boolean) => {
@@ -59,12 +59,7 @@ export default function Home() {
     sort: sortOption,
   });
   
-  const appIdsForVerification = useMemo(() => {
-    if (!apps) return [];
-    return apps.map(a => a.wingetId || a.id);
-  }, [apps]);
-
-  const { data: installedAppIds } = useInstalledApps(appIdsForVerification);
+  const { data: installedAppIds } = useInstalledApps(apps || [], bridgeState);
 
   const installedSet = useMemo(
     () => new Set(installedAppIds || []),
@@ -84,7 +79,7 @@ export default function Home() {
 
   // Handle install: check companion first
   const handleInstall = () => {
-    if (!companion.isConnected) {
+    if (bridgeState.kind !== "connected") {
       setCompanionDialogOpen(true);
       return;
     }
@@ -269,8 +264,10 @@ export default function Home() {
       <CompanionDialog
         open={companionDialogOpen}
         onOpenChange={setCompanionDialogOpen}
+        bridgeState={bridgeState}
       />
       <InstallToast onOpen={() => setInstallOpen(true)} />
     </div>
   );
 }
+3

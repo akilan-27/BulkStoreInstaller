@@ -180,7 +180,7 @@ export function Footer() {
 
       <ReportDialog open={reportOpen} onOpenChange={setReportOpen} />
       <InfoDialog open={infoOpen} onOpenChange={setInfoOpen} slug={infoSlug} />
-      <CompanionDialog open={companionOpen} onOpenChange={setCompanionOpen} />
+      {companionOpen && <CompanionDialog open={companionOpen} onOpenChange={setCompanionOpen} bridgeState={{ kind: "checking" }} />}
     </>
   );
 }

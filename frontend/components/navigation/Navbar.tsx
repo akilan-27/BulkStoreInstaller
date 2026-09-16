@@ -4,12 +4,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Moon, Sun, ShoppingCart, Wifi, WifiOff } from "lucide-react";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useCart } from "@/contexts/CartContext";
-import { useCompanion } from "@/hooks/useCompanion";
+import { useBridgeState } from "@/hooks/useCompanion";
 import { useEffect, useState, useRef, useCallback } from "react";
 import { SearchInput } from "@/components/inputs/SearchInput";
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
+import { CompanionDialog } from "@/components/dialogs/CompanionDialog";
+import { ShieldCheck } from "lucide-react";
 
 interface NavbarProps {
   onCartOpen: () => void;
@@ -18,9 +20,10 @@ interface NavbarProps {
 export function Navbar({ onCartOpen }: NavbarProps) {
   const { resolvedTheme, setTheme } = useTheme();
   const { cart } = useCart();
-  const companion = useCompanion();
+  const bridgeState = useBridgeState(false, false);
   const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [companionOpen, setCompanionOpen] = useState(false);
   const searchRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -85,11 +88,19 @@ export function Navbar({ onCartOpen }: NavbarProps) {
           <Tooltip>
             <TooltipTrigger
               render={
-                companion.isConnected ? (
+                bridgeState.kind === "connected" ? (
                   <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 cursor-default">
                     <Wifi className="h-3.5 w-3.5" />
                     <span className="hidden lg:inline">Companion Connected</span>
                   </div>
+                ) : bridgeState.kind === "unauthorized" ? (
+                  <button
+                    onClick={() => setCompanionOpen(true)}
+                    className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full text-xs font-medium bg-primary/10 text-primary hover:bg-primary/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
+                  >
+                    <ShieldCheck className="h-3.5 w-3.5" />
+                    <span className="hidden lg:inline">Unauthorized</span>
+                  </button>
                 ) : (
                   <a
                     href="https://github.com/akilan-27/BulkStoreInstaller/releases/latest/download/BulkStoreInstallerCompanionSetup.exe"
@@ -97,13 +108,13 @@ export function Navbar({ onCartOpen }: NavbarProps) {
                     className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full text-xs font-medium bg-destructive/10 text-destructive hover:bg-destructive/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
                   >
                     <WifiOff className="h-3.5 w-3.5" />
-                    <span className="hidden lg:inline">Offline (Download Companion)</span>
+                    <span className="hidden lg:inline">Offline (Download)</span>
                   </a>
                 )
               }
             />
             <TooltipContent>
-              {companion.isConnected
+              {bridgeState.kind === "connected"
                 ? "Windows Companion is connected"
                 : "Windows Companion is offline. Click to download the installer."}
             </TooltipContent>
@@ -171,6 +182,10 @@ export function Navbar({ onCartOpen }: NavbarProps) {
           </motion.div>
         </div>
       </div>
+      
+      {companionOpen && (
+        <CompanionDialog open={companionOpen} onOpenChange={setCompanionOpen} bridgeState={bridgeState} />
+      )}
     </motion.header>
   );
 }

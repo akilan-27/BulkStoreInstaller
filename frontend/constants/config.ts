@@ -5,14 +5,6 @@ export const config = {
   useMock: process.env.NEXT_PUBLIC_USE_MOCK === "true",
 } as const;
 
-// Companion API endpoints
-export const companionEndpoints = {
-  health: `${config.companionUrl}/health`,
-  install: `${config.companionUrl}/install`,
-  status: `${config.companionUrl}/status`,
-  cancel: `${config.companionUrl}/cancel`,
-  installed: `${config.companionUrl}/verify`,
-} as const;
 
 // API endpoints
 export const apiEndpoints = {

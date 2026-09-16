@@ -1,8 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect } from "react";
-import { localhost } from "@/services/localhost";
+import { bridgeClient } from "@/lib/bridge/client";
 import { App, InstallStatus } from "@/types";
-import { config } from "@/constants/config";
 
 const EMPTY_STATUS: InstallStatus = {
   isInstalling: false,
@@ -18,7 +17,7 @@ export function useInstallStatus(dialogOpen?: boolean) {
 
   const { data } = useQuery({
     queryKey: ["installStatus"],
-    queryFn: () => localhost.status(),
+    queryFn: () => bridgeClient.status(),
     refetchInterval: (query) => {
       const isInstalling = query.state.data?.isInstalling;
       if (isInstalling) return 1000;
@@ -53,18 +52,25 @@ export function useInstall() {
 
   const installMutation = useMutation({
     mutationFn: async (apps: App[]) => {
-      return localhost.install(apps);
+      return bridgeClient.install(apps);
     },
     onSuccess: invalidate,
   });
 
   const cancelMutation = useMutation({
-    mutationFn: () => localhost.cancel(),
+    mutationFn: () => bridgeClient.cancel(),
     onSuccess: invalidate,
   });
 
   const retryMutation = useMutation({
-    mutationFn: () => localhost.retryFailed(),
+    mutationFn: async () => {
+        const status = await bridgeClient.status();
+        if (!status) return;
+        const failedApps = status.queue.filter(q => q.status === "error").map(q => q.app);
+        if (failedApps.length > 0) {
+            return bridgeClient.install(failedApps);
+        }
+    },
     onSuccess: invalidate,
   });
 

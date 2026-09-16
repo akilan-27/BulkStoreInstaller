@@ -360,17 +360,17 @@ export function InstallDialog({ open, onOpenChange }: InstallDialogProps) {
                                 <span className="text-sm font-semibold truncate">
                                   {item.app.name}
                                 </span>
-                                <div className="text-xs font-medium capitalize flex-shrink-0 ml-2">
+                                <div className="text-xs font-medium capitalize ml-2 truncate text-right max-w-[60%]">
                                   {item.status === "success" ? (
-                                    <span className="text-emerald-600 dark:text-emerald-400">
+                                    <span className="text-emerald-600 dark:text-emerald-400 block truncate">
                                       Success
                                     </span>
                                   ) : item.status === "installing" ? (
-                                    <span className="text-primary">
+                                    <span className="text-primary block truncate">
                                       {item.statusText || "Installing..."} ({Math.min(100, Math.max(0, item.progress))}%)
                                     </span>
                                   ) : item.status === "error" ? (
-                                    <span className="text-destructive">
+                                    <span className="text-destructive block truncate">
                                       {item.statusText || "Failed"}
                                     </span>
                                   ) : (

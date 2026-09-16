@@ -243,8 +243,7 @@ main {
 /* ─── Progress Animation Fixes ────────────────────────────────────────── */
 .install-progress-track {
   position: relative;
-  overflow-x: clip;    /* Clip wave at left/right track edges */
-  overflow-y: visible; /* Let wave peaks extend above/below the bar */
+  overflow: hidden;
   border-radius: 999px;
   background: rgba(91, 61, 245, 0.1);
 }

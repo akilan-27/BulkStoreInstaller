@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "cG7p6LxP0mo=",
+  "success": true,
+  "projectFilePath": "D:\\web project\\multi app downloader\\windows-bridge\\src\\BulkStoreInstaller.Bridge\\BulkStoreInstaller.Bridge.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\raaki\\.nuget\\packages\\microsoft.net.illink.tasks\\10.0.12\\microsoft.net.illink.tasks.10.0.12.nupkg.sha512",
+    "C:\\Users\\raaki\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\10.0.12\\microsoft.netcore.app.runtime.win-x64.10.0.12.nupkg.sha512",
+    "C:\\Users\\raaki\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\10.0.12\\microsoft.windowsdesktop.app.runtime.win-x64.10.0.12.nupkg.sha512",
+    "C:\\Users\\raaki\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\10.0.12\\microsoft.aspnetcore.app.runtime.win-x64.10.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}
