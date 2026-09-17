@@ -364,11 +364,11 @@ export function InstallDialog({ open, onOpenChange }: InstallDialogProps) {
                             </div>
 
                             <div className="flex-1 min-w-0">
-                              <div className="flex justify-between items-center mb-1 gap-2">
-                                <span className="text-sm font-semibold truncate">
+                              <div className="flex justify-between items-center mb-1 gap-4">
+                                <span className="text-sm font-semibold truncate flex-shrink-0 max-w-[45%]">
                                   {item.app.name}
                                 </span>
-                                <div className="text-xs font-medium ml-2 truncate text-right flex-1 min-w-0">
+                                <div className="text-xs font-medium truncate text-right flex-1 min-w-0">
                                   {item.status === "success" ? (
                                     <span className="text-emerald-600 dark:text-emerald-400 block truncate">
                                       Success
@@ -382,7 +382,7 @@ export function InstallDialog({ open, onOpenChange }: InstallDialogProps) {
                                       {item.statusText || "Failed"}
                                     </span>
                                   ) : (
-                                    <span className="flex items-center gap-1.5 text-muted-foreground">
+                                    <span className="flex items-center justify-end gap-1.5 text-muted-foreground">
                                       <motion.span
                                         className="inline-block w-1.5 h-1.5 rounded-full bg-muted-foreground/50"
                                         animate={{ opacity: [0.3, 1, 0.3] }}

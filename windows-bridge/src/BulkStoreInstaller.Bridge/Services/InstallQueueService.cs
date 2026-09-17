@@ -218,11 +218,21 @@ namespace BulkStoreInstaller.Bridge.Services
 
                 lock (_lock)
                 {
-                    if (exitCode != 0)
+                    // Treat success (0) and "already installed/no update" codes as success
+                    // -1978335189 is WINGET_CONFIG_ERROR_NO_APPLICABLE_UPGRADE
+                    // -1978335215 is APPINSTALLER_CLI_ERROR_PACKAGE_ALREADY_INSTALLED
+                    if (exitCode != 0 && exitCode != -1978335189 && exitCode != -1978335215)
                     {
                         item.Status = "failed";
                         item.ErrorMessage = $"Installer failed with exit code {exitCode}";
                         _currentJob!.Failed++;
+                    }
+                    else if (exitCode == -1978335189 || exitCode == -1978335215)
+                    {
+                        item.Status = "success";
+                        item.StatusText = "Already up to date";
+                        item.Stage = "success";
+                        item.Progress = 100;
                     }
                 }
             }
