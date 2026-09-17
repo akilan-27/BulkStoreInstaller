@@ -103,7 +103,7 @@ export function Navbar({ onCartOpen }: NavbarProps) {
                   </button>
                 ) : (
                   <a
-                    href="/BulkStoreInstallerBridgeSetup.exe"
+                    href="https://github.com/akilan-27/BulkStoreInstaller/releases/download/v1.1.0/BulkStoreInstallerBridgeSetup.exe"
                     download="BulkStoreInstallerBridgeSetup.exe"
                     className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full text-xs font-medium bg-destructive/10 text-destructive hover:bg-destructive/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
                   >

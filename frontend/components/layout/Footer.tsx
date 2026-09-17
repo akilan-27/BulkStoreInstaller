@@ -61,7 +61,7 @@ export function Footer() {
                 </li>
                 <li>
                   <a
-                    href="/BulkStoreInstallerBridgeSetup.exe"
+                    href="https://github.com/akilan-27/BulkStoreInstaller/releases/download/v1.1.0/BulkStoreInstallerBridgeSetup.exe"
                     download="BulkStoreInstallerBridgeSetup.exe"
                     className="hover:text-foreground transition-colors text-left"
                   >
@@ -123,7 +123,7 @@ export function Footer() {
             </div>
             <a
               id="footer-download-btn"
-              href="/BulkStoreInstallerBridgeSetup.exe"
+              href="https://github.com/akilan-27/BulkStoreInstaller/releases/download/v1.1.0/BulkStoreInstallerBridgeSetup.exe"
               download="BulkStoreInstallerBridgeSetup.exe"
               className="
                 flex items-center justify-center gap-2 flex-shrink-0
