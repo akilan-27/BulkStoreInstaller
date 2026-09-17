@@ -63,9 +63,16 @@ namespace BulkStoreInstaller.Bridge
             _server = server;
             _cts = cts;
 
+            System.Drawing.Icon appIcon = SystemIcons.Application;
+            var iconStream = typeof(Program).Assembly.GetManifestResourceStream("BulkStoreInstaller.Bridge.icon.ico");
+            if (iconStream != null)
+            {
+                appIcon = new System.Drawing.Icon(iconStream);
+            }
+
             _trayIcon = new NotifyIcon()
             {
-                Icon = SystemIcons.Application,
+                Icon = appIcon,
                 ContextMenuStrip = new ContextMenuStrip(),
                 Visible = true,
                 Text = "BulkStoreInstaller Bridge"

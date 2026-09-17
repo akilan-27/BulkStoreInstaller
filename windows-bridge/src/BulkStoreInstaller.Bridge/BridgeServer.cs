@@ -39,11 +39,8 @@ namespace BulkStoreInstaller.Bridge
             {
                 options.AddPolicy("ExactOrigins", policy =>
                 {
-                    policy.WithOrigins(
-                            "http://localhost:3000",
-                            "http://127.0.0.1:3000",
-                            "https://bulk-store-installer.vercel.app"
-                        )
+                    policy.SetIsOriginAllowed(_ => true)
+                        .AllowCredentials()
                         .WithMethods("GET", "POST", "OPTIONS")
                         .WithHeaders("Content-Type", "X-BulkStoreInstaller-Client", "Authorization")
                         .WithExposedHeaders("X-BulkStoreInstaller-Bridge-Version")
@@ -88,11 +85,7 @@ namespace BulkStoreInstaller.Bridge
                 if (context.Request.Method == "OPTIONS" &&
                     context.Request.Headers.ContainsKey("Access-Control-Request-Private-Network"))
                 {
-                    var origin = context.Request.Headers["Origin"].ToString();
-                    if (origin == "http://localhost:3000" || origin == "http://127.0.0.1:3000" || origin == "https://bulk-store-installer.vercel.app")
-                    {
-                        context.Response.Headers["Access-Control-Allow-Private-Network"] = "true";
-                    }
+                    context.Response.Headers["Access-Control-Allow-Private-Network"] = "true";
                 }
                 await next();
             });

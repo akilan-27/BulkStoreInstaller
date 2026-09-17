@@ -28,6 +28,14 @@ import { App, InstallQueueItem } from "@/types";
 import { AppIcon } from "@/components/ui/app-icon";
 import { InstallProgress } from "@/components/ui/InstallProgress";
 
+const getFormattedStatusText = (text?: string) => {
+  if (!text) return "Installing...";
+  if (text.toLowerCase().includes("downloading") && text.match(/https?:\/\//i)) {
+    return "Downloading...";
+  }
+  return text;
+};
+
 interface InstallDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
@@ -356,18 +364,18 @@ export function InstallDialog({ open, onOpenChange }: InstallDialogProps) {
                             </div>
 
                             <div className="flex-1 min-w-0">
-                              <div className="flex justify-between items-center mb-1">
+                              <div className="flex justify-between items-center mb-1 gap-2">
                                 <span className="text-sm font-semibold truncate">
                                   {item.app.name}
                                 </span>
-                                <div className="text-xs font-medium capitalize ml-2 truncate text-right max-w-[60%]">
+                                <div className="text-xs font-medium ml-2 truncate text-right flex-1 min-w-0">
                                   {item.status === "success" ? (
                                     <span className="text-emerald-600 dark:text-emerald-400 block truncate">
                                       Success
                                     </span>
                                   ) : item.status === "installing" ? (
                                     <span className="text-primary block truncate">
-                                      {item.statusText || "Installing..."} ({Math.min(100, Math.max(0, item.progress))}%)
+                                      {getFormattedStatusText(item.statusText)} ({Math.min(100, Math.max(0, item.progress))}%)
                                     </span>
                                   ) : item.status === "error" ? (
                                     <span className="text-destructive block truncate">

@@ -4,13 +4,11 @@ import { useState } from "react";
 import { ExternalLink, Download, Heart, Flag } from "lucide-react";
 import { ReportDialog } from "@/components/dialogs/ReportDialog";
 import { InfoDialog } from "@/components/dialogs/InfoDialog";
-import { CompanionDialog } from "@/components/dialogs/CompanionDialog";
 
 export function Footer() {
   const [reportOpen, setReportOpen] = useState(false);
   const [infoOpen, setInfoOpen] = useState(false);
   const [infoSlug, setInfoSlug] = useState<string | null>(null);
-  const [companionOpen, setCompanionOpen] = useState(false);
 
   const openInfo = (slug: string) => {
     setInfoSlug(slug);
@@ -62,12 +60,13 @@ export function Footer() {
                   </button>
                 </li>
                 <li>
-                  <button
-                    onClick={() => setCompanionOpen(true)}
+                  <a
+                    href="/BulkStoreInstallerBridgeSetup.exe"
+                    download="BulkStoreInstallerBridgeSetup.exe"
                     className="hover:text-foreground transition-colors text-left"
                   >
                     Download Companion
-                  </button>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -122,9 +121,10 @@ export function Footer() {
                 installations.
               </p>
             </div>
-            <button
+            <a
               id="footer-download-btn"
-              onClick={() => setCompanionOpen(true)}
+              href="/BulkStoreInstallerBridgeSetup.exe"
+              download="BulkStoreInstallerBridgeSetup.exe"
               className="
                 flex items-center justify-center gap-2 flex-shrink-0
                 w-full sm:w-[180px]
@@ -137,7 +137,7 @@ export function Footer() {
             >
               <Download className="h-4 w-4" />
               Download Now
-            </button>
+            </a>
           </div>
 
           {/* Report / Feedback CTA */}
@@ -180,7 +180,6 @@ export function Footer() {
 
       <ReportDialog open={reportOpen} onOpenChange={setReportOpen} />
       <InfoDialog open={infoOpen} onOpenChange={setInfoOpen} slug={infoSlug} />
-      {companionOpen && <CompanionDialog open={companionOpen} onOpenChange={setCompanionOpen} bridgeState={{ kind: "checking" }} />}
     </>
   );
 }

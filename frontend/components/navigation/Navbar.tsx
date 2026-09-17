@@ -103,8 +103,8 @@ export function Navbar({ onCartOpen }: NavbarProps) {
                   </button>
                 ) : (
                   <a
-                    href="https://github.com/akilan-27/BulkStoreInstaller/releases/latest/download/BulkStoreInstallerCompanionSetup.exe"
-                    download="BulkStoreInstallerCompanionSetup.exe"
+                    href="/BulkStoreInstallerBridgeSetup.exe"
+                    download="BulkStoreInstallerBridgeSetup.exe"
                     className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full text-xs font-medium bg-destructive/10 text-destructive hover:bg-destructive/20 hover:scale-105 active:scale-95 transition-all cursor-pointer"
                   >
                     <WifiOff className="h-3.5 w-3.5" />

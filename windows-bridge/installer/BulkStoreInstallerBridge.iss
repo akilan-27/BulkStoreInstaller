@@ -11,6 +11,7 @@ OutputBaseFilename=BulkStoreInstallerBridgeSetup
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
+SetupIconFile=..\src\BulkStoreInstaller.Bridge\icon.ico
 UninstallDisplayIcon={app}\BulkStoreInstaller.Bridge.exe
 
 [Languages]
