@@ -160,8 +160,6 @@ namespace BulkStoreInstaller.Bridge.Services
             _activeProcess.StartInfo.ArgumentList.Add("--id");
             _activeProcess.StartInfo.ArgumentList.Add(item.WingetId);
             _activeProcess.StartInfo.ArgumentList.Add("--exact");
-            _activeProcess.StartInfo.ArgumentList.Add("--source");
-            _activeProcess.StartInfo.ArgumentList.Add("winget");
             _activeProcess.StartInfo.ArgumentList.Add("--accept-package-agreements");
             _activeProcess.StartInfo.ArgumentList.Add("--accept-source-agreements");
             _activeProcess.StartInfo.ArgumentList.Add("--disable-interactivity");
@@ -224,7 +222,14 @@ namespace BulkStoreInstaller.Bridge.Services
                     if (exitCode != 0 && exitCode != -1978335189 && exitCode != -1978335215)
                     {
                         item.Status = "failed";
-                        item.ErrorMessage = $"Installer failed with exit code {exitCode}";
+                        if (exitCode == -1978335212)
+                        {
+                            item.ErrorMessage = "Package not found in Winget/Store";
+                        }
+                        else
+                        {
+                            item.ErrorMessage = $"Installer failed with exit code {exitCode}";
+                        }
                         _currentJob!.Failed++;
                     }
                     else if (exitCode == -1978335189 || exitCode == -1978335215)

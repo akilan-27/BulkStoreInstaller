@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BulkStoreInstaller.Bridge")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+291b837ce0d4e5576eaf884fc2db5c5d6d7c152c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4808446225be214ce6c7e3b3d520f4073a8b7643")]
 [assembly: System.Reflection.AssemblyProductAttribute("BulkStoreInstaller.Bridge")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BulkStoreInstaller.Bridge")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
