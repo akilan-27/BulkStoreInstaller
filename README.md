@@ -20,9 +20,7 @@ npm install
 npm run dev
 ```
 
-**Backend:**
-```bash
-cd backend
+*3
 pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
