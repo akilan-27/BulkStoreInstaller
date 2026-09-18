@@ -192,7 +192,7 @@ export default function Home() {
                         key={app.id}
                         app={app}
                         index={index}
-                        isInstalled={installedSet.has(app.wingetId || app.id)}
+                        isInstalled={installedSet.has(app.id)}
                         selected={cartIds.has(app.id)}
                         onToggle={handleToggleCart}
                       />

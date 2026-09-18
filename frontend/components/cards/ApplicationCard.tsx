@@ -110,8 +110,8 @@ function ApplicationCardComponent({
           </span>
 
           {isInstalled ? (
-            <div className="flex items-center text-emerald-500 text-sm font-medium flex-shrink-0">
-              <CheckCircle2 className="mr-1.5 h-4 w-4" />
+            <div className="flex items-center h-7 px-2.5 bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 text-[0.8rem] font-medium rounded-[var(--radius-button)] flex-shrink-0 border border-emerald-500/20">
+              <CheckCircle2 className="mr-1.5 h-3.5 w-3.5" />
               Installed
             </div>
           ) : (

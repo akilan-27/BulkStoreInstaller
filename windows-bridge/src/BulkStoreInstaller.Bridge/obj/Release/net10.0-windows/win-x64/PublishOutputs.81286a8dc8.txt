@@ -1,0 +1,3 @@
+D:\web project\multi app downloader\windows-bridge\src\BulkStoreInstaller.Bridge\publish_output\BulkStoreInstaller.Bridge.pdb
+D:\web project\multi app downloader\windows-bridge\src\BulkStoreInstaller.Bridge\publish_output\Assets\catalog.json
+D:\web project\multi app downloader\windows-bridge\src\BulkStoreInstaller.Bridge\publish_output\BulkStoreInstaller.Bridge.exe

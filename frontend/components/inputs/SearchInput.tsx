@@ -61,7 +61,7 @@ export const SearchInput = forwardRef<HTMLInputElement>(function SearchInput(_, 
     } else if (e.key === "Enter" && selectedIndex >= 0) {
       e.preventDefault();
       const app = searchResults[selectedIndex];
-      const isInstalled = installedAppIds?.includes(app?.wingetId || app?.id);
+      const isInstalled = installedAppIds?.includes(app?.id);
       if (app && !isInCart(app.id) && !isInstalled) {
         addToCart(app);
       }
@@ -148,7 +148,7 @@ export const SearchInput = forwardRef<HTMLInputElement>(function SearchInput(_, 
                   {searchResults.length} result{searchResults.length !== 1 ? "s" : ""}
                 </div>
                 {searchResults.slice(0, showAll ? undefined : 8).map((app: App, index: number) => {
-                  const isInstalled = installedAppIds?.includes(app.wingetId || app.id);
+                  const isInstalled = installedAppIds?.includes(app.id);
                   const added = isInCart(app.id) || isInstalled;
                   return (
                     <button
@@ -183,13 +183,18 @@ export const SearchInput = forwardRef<HTMLInputElement>(function SearchInput(_, 
                         </div>
                       </div>
                       <div className="flex-shrink-0 ml-2">
-                        {added ? (
-                          <span className="flex items-center text-xs text-primary font-medium">
+                        {isInstalled ? (
+                          <span className="flex items-center text-xs text-emerald-600 dark:text-emerald-400 font-medium px-2 py-1 bg-emerald-500/15 rounded-md border border-emerald-500/20">
+                            <Check className="h-3.5 w-3.5 mr-1" />
+                            Installed
+                          </span>
+                        ) : isInCart(app.id) ? (
+                          <span className="flex items-center text-xs text-primary font-medium px-2 py-1 bg-primary/10 rounded-md border border-primary/20">
                             <Check className="h-3.5 w-3.5 mr-1" />
                             Added
                           </span>
                         ) : (
-                          <span className="flex items-center text-xs text-muted-foreground group-hover:text-foreground">
+                          <span className="flex items-center text-xs text-muted-foreground group-hover:text-foreground px-2 py-1">
                             <Plus className="h-3.5 w-3.5 mr-1" />
                             Add
                           </span>

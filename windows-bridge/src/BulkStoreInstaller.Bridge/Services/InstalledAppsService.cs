@@ -54,30 +54,52 @@ namespace BulkStoreInstaller.Bridge.Services
                 }
             }
 
-            if (headerIdx == -1 || headerIdx == 0) return ids;
+            if (headerIdx <= 0) return ids;
 
-            string separatorLine = lines[headerIdx];
-            var match = Regex.Match(separatorLine, @"^(---+\s+)(---+\s+)(---+\s+)");
-            if (match.Success)
+            string headerText = lines[headerIdx - 1];
+            
+            int idStart = headerText.IndexOf("Id");
+            if (idStart == -1) idStart = headerText.IndexOf("ID");
+            
+            // If we can't find 'Id' or 'ID', fallback to old behavior or just return
+            if (idStart == -1)
             {
-                int idStart = match.Groups[1].Length;
-                int idLength = match.Groups[2].Length;
-
-                for (int i = headerIdx + 1; i < lines.Length; i++)
+                string separatorLine = lines[headerIdx];
+                var match = Regex.Match(separatorLine, @"^(---+\s+)(---+\s+)(---+\s+)");
+                if (match.Success)
                 {
-                    var line = lines[i];
-                    if (line.Length > idStart)
+                    idStart = match.Groups[1].Length;
+                    int oldIdLength = match.Groups[2].Length;
+                    ExtractIds(lines, headerIdx, idStart, oldIdLength, ids);
+                }
+                return ids;
+            }
+
+            int versionStart = headerText.IndexOf("Version");
+            if (versionStart == -1) versionStart = headerText.IndexOf("VERSION");
+
+            int idLength = (versionStart != -1) ? (versionStart - idStart) : (headerText.Length - idStart);
+
+            ExtractIds(lines, headerIdx, idStart, idLength, ids);
+            
+            return ids;
+        }
+
+        private void ExtractIds(string[] lines, int headerIdx, int idStart, int idLength, List<string> ids)
+        {
+            for (int i = headerIdx + 1; i < lines.Length; i++)
+            {
+                var line = lines[i];
+                if (line.Length > idStart)
+                {
+                    var len = Math.Min(idLength, line.Length - idStart);
+                    var id = line.Substring(idStart, len).Trim();
+                    if (!string.IsNullOrEmpty(id) && id != "<" && id != "…")
                     {
-                        var len = Math.Min(idLength, line.Length - idStart);
-                        var id = line.Substring(idStart, len).Trim();
-                        if (!string.IsNullOrEmpty(id) && id != "<" && id != "…")
-                        {
-                            ids.Add(id);
-                        }
+                        ids.Add(id);
                     }
                 }
             }
-            return ids;
         }
     }
 }
