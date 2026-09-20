@@ -1,0 +1,4 @@
+D:\web project\multi app downloader\dist\BulkStoreInstaller.Bridge.pdb
+D:\web project\multi app downloader\dist\Assets\catalog.json
+D:\web project\multi app downloader\dist\aspnetcorev2_inprocess.dll
+D:\web project\multi app downloader\dist\BulkStoreInstaller.Bridge.exe

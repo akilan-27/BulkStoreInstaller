@@ -269,4 +269,5 @@ export default function Home() {
       <InstallToast onOpen={() => setInstallOpen(true)} />
     </div>
   );
-}
+}
+3

@@ -58,27 +58,54 @@ namespace BulkStoreInstaller.Bridge.Services
 
             string headerText = lines[headerIdx - 1];
             
-            int idStart = headerText.IndexOf("Id");
-            if (idStart == -1) idStart = headerText.IndexOf("ID");
-            
-            // If we can't find 'Id' or 'ID', fallback to old behavior or just return
-            if (idStart == -1)
+            int idStart = -1;
+            int idLength = -1;
+
+            // Universal fallback using column spacing (winget columns are separated by at least 2 spaces)
+            // The columns are always: Name, Id, Version, Available, Source
+            var spaceMatches = Regex.Matches(headerText, @"\s{2,}");
+            if (spaceMatches.Count >= 1)
             {
-                string separatorLine = lines[headerIdx];
-                var match = Regex.Match(separatorLine, @"^(---+\s+)(---+\s+)(---+\s+)");
-                if (match.Success)
+                idStart = spaceMatches[0].Index + spaceMatches[0].Length;
+                
+                if (spaceMatches.Count >= 2)
                 {
-                    idStart = match.Groups[1].Length;
-                    int oldIdLength = match.Groups[2].Length;
-                    ExtractIds(lines, headerIdx, idStart, oldIdLength, ids);
+                    int versionStart = spaceMatches[1].Index + spaceMatches[1].Length;
+                    idLength = versionStart - idStart;
                 }
-                return ids;
+                else
+                {
+                    idLength = headerText.Length - idStart;
+                }
             }
 
-            int versionStart = headerText.IndexOf("Version");
-            if (versionStart == -1) versionStart = headerText.IndexOf("VERSION");
-
-            int idLength = (versionStart != -1) ? (versionStart - idStart) : (headerText.Length - idStart);
+            // Fallback to legacy parsing if regex fails for some reason
+            if (idStart == -1)
+            {
+                idStart = headerText.IndexOf("Id");
+                if (idStart == -1) idStart = headerText.IndexOf("ID");
+                
+                if (idStart == -1)
+                {
+                    string separatorLine = lines[headerIdx];
+                    var match = Regex.Match(separatorLine, @"^(---+\s+)(---+\s+)(---+\s+)");
+                    if (match.Success)
+                    {
+                        idStart = match.Groups[1].Length;
+                        idLength = match.Groups[2].Length;
+                    }
+                    else
+                    {
+                        return ids;
+                    }
+                }
+                else
+                {
+                    int versionStart = headerText.IndexOf("Version");
+                    if (versionStart == -1) versionStart = headerText.IndexOf("VERSION");
+                    idLength = (versionStart != -1) ? (versionStart - idStart) : (headerText.Length - idStart);
+                }
+            }
 
             ExtractIds(lines, headerIdx, idStart, idLength, ids);
             

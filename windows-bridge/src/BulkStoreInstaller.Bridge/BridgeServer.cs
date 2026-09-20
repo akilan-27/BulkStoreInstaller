@@ -99,8 +99,9 @@ namespace BulkStoreInstaller.Bridge
                 if (path == "/install" || path == "/status" || path == "/cancel" || path == "/verify")
                 {
                     // 1. Validate Client Marker
-                    if (!context.Request.Headers.TryGetValue("X-BulkStoreInstaller-Client", out var clientHeader) ||
-                        clientHeader != "web-v1")
+                    if (context.Request.Method != "OPTIONS" && 
+                        (!context.Request.Headers.TryGetValue("X-BulkStoreInstaller-Client", out var clientHeader) ||
+                        clientHeader != "web-v1"))
                     {
                         context.Response.StatusCode = 403;
                         return;
