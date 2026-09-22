@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/akilan-27/BulkStoreInstaller/main/frontend/app/icon.png" alt="BulkStoreInstaller logo" width="100" />
+  <img src="<img width="1024" height="1024" alt="logo" src="https://github.com/user-attachments/assets/d6cc5cd3-88d9-4dc0-bb94-2f805b04442b" />" alt="BulkStoreInstaller logo" width="100" />
 </p>
 
 # BulkStoreInstaller
