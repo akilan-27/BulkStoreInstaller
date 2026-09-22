@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="<img width="1024" height="1024" alt="logo" src="https://github.com/user-attachments/assets/d6cc5cd3-88d9-4dc0-bb94-2f805b04442b" />" alt="BulkStoreInstaller logo" width="100" />
+  <img width="1024" height="1024" alt="logo" src="https://github.com/user-attachments/assets/8ad59356-2542-46d3-afce-af5f81dc9b94" />
 </p>
 
 # BulkStoreInstaller
