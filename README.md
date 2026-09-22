@@ -1,7 +1,3 @@
-<p align="center">
-  <img width="1024" height="1024" alt="logo" src="https://github.com/user-attachments/assets/8ad59356-2542-46d3-afce-af5f81dc9b94" />
-</p>
-
 # BulkStoreInstaller
 
 **Discover Windows applications, build your cart, and install selected apps in one batch.**
