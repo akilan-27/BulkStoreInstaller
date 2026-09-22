@@ -26,19 +26,23 @@ Click a screenshot to open the original PNG.
 
 ### Application Catalog
 
-[![Application catalog with search, categories, and application cards](docs/screenshots/catalog.png)](docs/screenshots/catalog.png)
+<img width="1917" height="922" alt="Screenshot 2026-09-22 151133" src="https://github.com/user-attachments/assets/803751e0-b94b-42f2-a95e-6012200664e7" />
+
 
 ### Cart and Selection
 
-[![Cart showing selected applications and the Install All button](docs/screenshots/cart.png)](docs/screenshots/cart.png)
+<img width="1917" height="926" alt="Screenshot 2026-09-22 151325" src="https://github.com/user-attachments/assets/fe2eccf1-e128-4f13-aa29-6ea0e6dce10b" />
+
 
 ### Installation Status
 
-[![Installation queue showing completed, downloading, and waiting applications](docs/screenshots/installation-status.png)](docs/screenshots/installation-status.png)
+<img width="1916" height="925" alt="Screenshot 2026-09-22 151458" src="https://github.com/user-attachments/assets/e9325c30-2828-480f-af67-8e06c4249059" />
+
 
 ### Bridge Status
 
-[![Connected Windows Bridge status in the application header](docs/screenshots/bridge-status.png)](docs/screenshots/bridge-status.png)
+<img width="1917" height="862" alt="image" src="https://github.com/user-attachments/assets/fa620463-e542-4601-a2ea-4f2be401a624" />
+
 
 ## How It Works
 
